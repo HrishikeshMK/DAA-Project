@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Maximal Clique Enumeration Project</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+</head>
+<body class="bg-gray-100 text-gray-800">
+    <header class="bg-blue-800 text-white p-6 shadow-lg">
+        <h1 class="text-4xl font-bold text-center">Time complexity Analysis of different algorithms for finding maximal cliques</h1>
+        <p class="text-center text-lg mt-2">C++ Implementation of Maximal Clique Algorithms</p>
+    </header>
+
+    <main class="p-8 max-w-4xl mx-auto">
+        <section class="mb-10">
+            <h2 class="text-2xl font-semibold text-blue-700">Introduction</h2>
+            <p class="mt-2 text-gray-700">Graph theory is fundamental in computer science, with applications ranging from social network analysis to bioinformatics. One critical problem in graph theory is maximal clique enumeration—identifying all maximal cliques (complete subgraphs that cannot be extended by adding another vertex) within a given graph. Efficient enumeration of maximal cliques has practical implications in diverse fields, including community detection, network security, and pattern recognition. This project focuses on implementing and analyzing three state-of-the-art maximal clique enumeration algorithms, each derived from prominent research papers. The aim is to understand their computational efficiencies and compare their performances across various graph datasets.</p>
+        </section>
+
+        <section class="mb-10">
+            <h2 class="text-2xl font-semibold text-blue-700">Implemented Algorithms</h2>
+            <ul class="list-disc ml-6 mt-2 text-gray-700">
+                <li><span class="font-medium">Procedure CLIQUE</span> from "The Worst-case Time Complexity for Generating All Maximal Cliques and Computational Experiments" (Page 31).</li>
+                <li><span class="font-medium">Procedure BronKerboschDegeneracy</span> from "Listing All Maximal Cliques in Sparse Graphs in Near-Optimal Time" (Figure 4).</li>
+                <li><span class="font-medium">Procedure CLIQUE</span> from "Arboricity and Subgraph Listing Algorithms" (Pages 220-222).</li>
+            </ul>
+        </section>
+
+        <section class="mb-10">
+            <h2 class="text-2xl font-semibold text-blue-700">Results</h2>
+            <p class="mt-2 text-gray-700">The results are derived from runtime experiments using 2-3 graph datasets. These include both graphical and textual representations for better understanding.</p>
+            <div class="bg-white p-4 rounded shadow-md mt-4">
+                <h3 class="text-xl font-semibold text-gray-800">Graphical Representation</h3>
+                <img src="results-graph.png" alt="Graph Results" class="w-full mt-3 rounded-lg shadow">
+            </div>
+            <div class="bg-white p-4 rounded shadow-md mt-4">
+                <h3 class="text-xl font-semibold text-gray-800">Textual Analysis</h3>
+                <pre class="bg-gray-100 p-3 rounded-lg mt-2">Algorithm 1: Runtime X ms
+Algorithm 2: Runtime Y ms
+Algorithm 3: Runtime Z ms</pre>
+            </div>
+        </section>
+
+        <footer class="text-center text-sm text-gray-600 mt-10">
+            <p>&copy; 2025 Maximal Clique Enumeration Project | All Rights Reserved</p>
+        </footer>
+    </main>
+</body>
+</html>
