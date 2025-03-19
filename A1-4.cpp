@@ -12,24 +12,26 @@ struct Graph{
 // Global Variables
 Graph G;
 vector<int> clique;
+unordered_map<int, int> clique_dist;
+int maxCliqueSize = 0;
 // Function Definitions
 // Function to find the vertex in the subgraph that maximises adjacency with the candidate set
 int maximize(const unordered_set<int>& subg, const unordered_set<int>& cand){
     int maxc = -1, u = -1;
     for(int vertex : subg){
         int currc = 0;
-        const auto& bigTau = G.adjList[vertex]; // No need to copy, just use pointer hence saves a lot of time        
-        // if cand set is very large, set intersection is done using approx linear search on integers from bigTau
-        // if cand set is small, set intersection is done using binary search on sorted bigTau
-        if(cand.size() > bigTau.size()*log2(cand.size())){
-            for(int i : bigTau){
+        const auto& bigGamma = G.adjList[vertex]; // No need to copy, just use pointer hence saves a lot of time        
+        // if cand set is very large, set intersection is done using approx linear search on integers from bigGamma
+        // if cand set is small, set intersection is done using binary search on sorted bigGamma
+        if(cand.size() > bigGamma.size()*log2(cand.size())){
+            for(int i : bigGamma){
                 if(cand.find(i) != cand.end()){
                     currc++;
                 }
             }
         }else{
             for(int i : cand){
-                if(binary_search(bigTau.begin(), bigTau.end(), i))
+                if(binary_search(bigGamma.begin(), bigGamma.end(), i))
                     currc++;
             }
         }
@@ -41,15 +43,15 @@ int maximize(const unordered_set<int>& subg, const unordered_set<int>& cand){
     return u;
 }
 
-// Function to get adjacent vertices (neighbors) of a vertex
+/* // Function to get adjacent vertices (neighbors) of a vertex
 // Returns by value but avoids recreating the set each time
 inline unordered_set<int> getNeighbors(int vertex){
     if(vertex == -1) return {};
     return {G.adjList[vertex].begin(), G.adjList[vertex].end()};
-}
+} */
 
 // Helper function
-void expand(const unordered_set<int>& subg, unordered_set<int> cand, int& count, vector<vector<int>>& allCliques){
+void expand(const unordered_set<int>& subg, unordered_set<int> cand, int& count, vector<vector<int>>& allCliques, int& currCliqueSize){
     // Iterative version which counts the number of cliques
     // 2
     /* stack<tuple<unordered_set<int>, unordered_set<int>>> st;
@@ -69,8 +71,8 @@ void expand(const unordered_set<int>& subg, unordered_set<int> cand, int& count,
         int u = maximize(subg, cand); // 4
         
         unordered_set<int> ext_u = cand;
-        const auto& tau_u = G.adjList[u];
-        for(int neighbor : tau_u){
+        const auto& gamma_u = G.adjList[u];
+        for(int neighbor : gamma_u){
             ext_u.erase(neighbor);
         }
 
@@ -80,12 +82,12 @@ void expand(const unordered_set<int>& subg, unordered_set<int> cand, int& count,
             // cout<<q<<", "; // 7
             i = ext_u.erase(i); // 11
             
-            const auto& bigTau_q = G.adjList[q];
+            const auto& bigGamma_q = G.adjList[q];
             unordered_set<int> subg_q, cand_q; 
             // Reserve capacity to avoid rehashing
-            subg_q.reserve(min(subg.size(), bigTau_q.size()));
-            cand_q.reserve(min(cand.size(), bigTau_q.size()));
-            for(int v : bigTau_q){
+            subg_q.reserve(min(subg.size(), bigGamma_q.size()));
+            cand_q.reserve(min(cand.size(), bigGamma_q.size()));
+            for(int v : bigGamma_q){
                 if(subg.find(v) != subg.end()) subg_q.insert(v); // 8
                 if(cand.find(v) != cand.end()) cand_q.insert(v); // 9
             } 
@@ -95,8 +97,14 @@ void expand(const unordered_set<int>& subg, unordered_set<int> cand, int& count,
     } */
 
     // Recursive version which can store and print cliques
+
     if(subg.empty()){
         count++;
+        maxCliqueSize = max(maxCliqueSize, currCliqueSize);
+        if(clique_dist.find(currCliqueSize) == clique_dist.end())
+            clique_dist[currCliqueSize] = 1;
+        else 
+            clique_dist[currCliqueSize]++;
         // cout<<"clique.\n"; // 3
         // allCliques.push_back({clique.begin(), clique.end()});
         if(count % 1000 == 0){
@@ -107,8 +115,8 @@ void expand(const unordered_set<int>& subg, unordered_set<int> cand, int& count,
     int u = maximize(subg, cand); // 4
     
     unordered_set<int> ext_u = cand;
-    const auto& tau_u = G.adjList[u];
-    for(int neighbor : tau_u){
+    const auto& gamma_u = G.adjList[u];
+    for(int neighbor : gamma_u){
         ext_u.erase(neighbor);
     }
 
@@ -117,19 +125,21 @@ void expand(const unordered_set<int>& subg, unordered_set<int> cand, int& count,
         int q = *i; // 6
         // cout<<q<<", "; // 7
         // clique.push_back(q); // 7
+        currCliqueSize++;
         i = ext_u.erase(i); // 11
         
-        const auto& bigTau_q = G.adjList[q];
+        const auto& bigGamma_q = G.adjList[q];
         unordered_set<int> subg_q, cand_q; 
-        subg_q.reserve(min(subg.size(), bigTau_q.size()));
-        cand_q.reserve(min(cand.size(), bigTau_q.size()));
-        for(int v : bigTau_q){
+        subg_q.reserve(min(subg.size(), bigGamma_q.size()));
+        cand_q.reserve(min(cand.size(), bigGamma_q.size()));
+        for(int v : bigGamma_q){
             if(subg.find(v) != subg.end()) subg_q.insert(v); // 8
             if(cand.find(v) != cand.end()) cand_q.insert(v); // 9
         } 
-        expand(subg_q, cand_q, count, allCliques); // 10
+        expand(subg_q, cand_q, count, allCliques, currCliqueSize); // 10
         cand.erase(q); // 11
         // cout<<"back, "; // 12
+        currCliqueSize--;
         // clique.pop_back(); // 13
     }
 }
@@ -149,10 +159,14 @@ void cliques(){
     cout << "Finding maximal cliques...\n";
     
     auto start = high_resolution_clock::now(); // Start timer
-    expand(vertices, vertices, count, allCliques); // 1
+    int currCliqueSize = 0;
+    expand(vertices, vertices, count, allCliques, currCliqueSize); // 1
     auto stop = high_resolution_clock::now(); // Stop timer
     
+    
     cout << "\nTotal # of maximal cliques found: " << count << endl;
+    cout << "Maximum clique size: " << maxCliqueSize << endl;
+    
     auto duration = duration_cast<milliseconds>(stop - start);
     cout << "Time taken: " << duration.count() / 1000.0 << " seconds.\n";
 }
@@ -230,5 +244,10 @@ int main() {
     }
     
     cliques();
+
+    cout << "Clique size distribution:\n";
+    for(auto i: clique_dist){
+        cout << "Clique size: " << i.first << " Count: " << i.second << endl;
+    }
     return 0;
 }
