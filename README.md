@@ -11,7 +11,7 @@ Algorithm Implementation
 #### ++++++++++++++++++++++++++++++++++++++++++++
 
 ## Tomita's Algorithm
-* Download the tomita.cpp file with the \<file_name\>.txt in the same directory.\
-* Compile the code using g++ tomita.cpp -o tomita\
-* Run using command ./tomita \
-* Enter the filename without the .txt\
+* Download the tomita.cpp file with the \<file_name\>.txt in the same directory.
+* Compile the code using g++ tomita.cpp -o tomita
+* Run using command ./tomita 
+* Enter the filename without the .txt
