@@ -246,7 +246,7 @@ int main() {
     cliques();
 
     cout << "Clique size distribution:\n";
-    for(auto i: clique_dist){
+    for(auto i : clique_dist){
         cout << "Clique size: " << i.first << " Count: " << i.second << endl;
     }
     return 0;
