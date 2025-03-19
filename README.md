@@ -5,8 +5,8 @@ Algorithm Implementation
 
 ### ++++++++++++++++++++++++++++++++++++++++
 ### \# Nodes: <num_nodes> Edges: <num_edges>
-### \# FromNodeId (emsp) ToNodeId
-### <Vertex1> (emsp) <Vertex2> // Edge
+### \# FromNodeId \t ToNodeId
+### <Vertex1> \t <Vertex2> // Edge
 ### and so on...
 ### ++++++++++++++++++++++++++++++++++++++++
 
