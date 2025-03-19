@@ -1,25 +1,20 @@
-document.addEventListener("DOMContentLoaded", function() {
-    const toggleButton = document.getElementById("toggleResults");
-    const resultsContainer = document.getElementById("resultsContainer");
-    
-    // Create Toggle Switch for Dark/Light Mode
-    const toggleContainer = document.createElement("div");
-    toggleContainer.classList.add("toggle-container");
-    
-    const toggleSwitch = document.createElement("div");
-    toggleSwitch.classList.add("toggle-switch");
-    
-    toggleContainer.appendChild(toggleSwitch);
-    document.body.insertBefore(toggleContainer, document.body.firstChild);
-    
-    toggleSwitch.addEventListener("click", function() {
-        document.body.classList.toggle("light-mode");
+document.addEventListener("DOMContentLoaded", () => {
+    const toggleSwitch = document.getElementById("darkModeToggle");
+    const body = document.body;
+
+    // Load saved theme from localStorage
+    if (localStorage.getItem("darkMode") === "enabled") {
+        body.classList.add("light-mode");
+    }
+
+    toggleSwitch.addEventListener("click", () => {
+        body.classList.toggle("light-mode");
         
-        // Adjust toggle switch position
-        toggleSwitch.classList.toggle("active");
-    });
-    
-    toggleButton.addEventListener("click", function() {
-        resultsContainer.classList.toggle("hidden");
+        // Save preference in localStorage
+        if (body.classList.contains("light-mode")) {
+            localStorage.setItem("darkMode", "enabled");
+        } else {
+            localStorage.setItem("darkMode", "disabled");
+        }
     });
 });
