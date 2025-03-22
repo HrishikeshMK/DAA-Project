@@ -21,3 +21,5 @@ Hrishikesh MK - Updated and maintained the GitHub repo for the project with read
 	      - Implemented the Tomita's algorithm in C++, tested the time for execution of algorithm and found the clique 
 		distribution.
 	      - Wrote the report for corresponding algorithm implemented.
+Satya K       - Implemented the Eppstein's algorithm in C++, tested it and collected the required data
+	      - Contributed to the report
