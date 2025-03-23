@@ -8,13 +8,10 @@ Group members
 GitHub pages link - https://hrishikeshmk.github.io/DAA-Project/
 
 Execution Instructions
-1. Tomita's algorithm
 	Save the cpp file in the same directory as the txt graph file
 	compile and run the cpp file
 	Write the name of the file without the .txt
 
-2.
-3.
 
 Individual contributions
 Hrishikesh MK - Updated and maintained the GitHub repo for the project with readme.md and helped in creating the webpage.
