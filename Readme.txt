@@ -26,5 +26,4 @@ Satya K       - Implemented the Eppstein's algorithm in C++, tested it and colle
 Yuvraj Chauhan - Conducted extensive testing to analyze the execution time and clique distribution for various datasets.
                - Contributed to the report by documenting the histograms from the experiments.
                - Created and maintained the GitHub webpage for the project, including writing HTML content to present the project overview, 
-                 assignment details, and 
-                 results.
+                 assignment details, and results.
