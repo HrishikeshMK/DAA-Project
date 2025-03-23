@@ -27,3 +27,5 @@ Yuvraj Chauhan - Conducted extensive testing to analyze the execution time and c
                - Contributed to the report by documenting the histograms from the experiments.
                - Created and maintained the GitHub webpage for the project, including writing HTML content to present the project overview, 
                  assignment details, and results.
+Harinandan Arun - Implemented the Chiba's algorithm in C++, contributed to the report
+Ashish C - Implemented the Chiba's Algorithm in C++, contributed to the report
