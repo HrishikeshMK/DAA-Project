@@ -15,3 +15,8 @@ Algorithm Implementation
 * Compile the code using g++ tomita.cpp -o tomita
 * Run using command ./tomita 
 * Enter the filename without the .txt
+
+## MaxClique Algorithm
+* Compile the code using g++ maxclique.cpp -o maxclique
+* Download the \<file_name\>.txt in the same directory as maxclique.exe
+* Run using .\maxclique \<file_name\>.txt
