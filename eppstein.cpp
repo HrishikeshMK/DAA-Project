@@ -24,19 +24,19 @@ public:
     }
 
     void loadGraph(const string& file) {
-        unordered_map<string, int> email_map;
+        unordered_map<string, int> node_map;
         vector<pair<int, int>> edges;
         ifstream fs(file);
         string from, to;
 
         // Read edges and create integer mappings
         while (fs >> from >> to) {
-            if (!email_map.count(from)) email_map[from] = node_count++;
-            if (!email_map.count(to)) email_map[to] = node_count++;
-            int u = email_map[from];
-            int v = email_map[to];
+            if (!node_map.count(from)) node_map[from] = node_count++;
+            if (!node_map.count(to)) node_map[to] = node_count++;
+            int u = node_map[from];
+            int v = node_map[to];
             edges.emplace_back(u, v);
-            edges.emplace_back(v, u); // Undirected graph
+            edges.emplace_back(v, u); // Convert to undirected graph
         }
 
         // Build adjacency list
@@ -45,6 +45,7 @@ public:
             int u = edge.first;
             int v = edge.second;
             adj[u].push_back(v);
+            adj[v].push_back(u); // Ensure undirected graph
         }
 
         // Sort and remove duplicates
@@ -216,17 +217,38 @@ public:
         auto end = high_resolution_clock::now();
         
         auto duration = duration_cast<milliseconds>(end - start);
-        cout << "Enron Dataset Analysis:\n";
+        cout << "Dataset Analysis:\n";
         cout << "Nodes: " << node_count << "\n";
         cout << "Edges: " << accumulate(adj.begin(), adj.end(), 0, 
             [](int sum, const vector<int>& v) { return sum + v.size(); }) / 2 << "\n";
         cout << "Maximal Cliques Found: " << cliques.size() << "\n";
         cout << "Execution Time: " << duration.count() << " ms\n";
+        
+        // Output clique sizes to a file for histogram creation
+        ofstream fs("clique_sizes.txt");
+        vector<int> clique_sizes;
+        for (const auto& clique : cliques) {
+            clique_sizes.push_back(clique.size());
+            fs << clique.size() << "\n";
+        }
+        fs.close();
+        
+        // Print clique size distribution
+        cout << "Clique Size Distribution:\n";
+        map<int, int> size_distribution;
+        for (int size : clique_sizes) {
+            size_distribution[size]++;
+        }
+        for (const auto& pair : size_distribution) {
+            cout << "Size " << pair.first << ": " << pair.second << " cliques\n";
+        }
     }
 };
 
 int main(int argc, char* argv[]) {
-   
+    // Run analysis on wiki-Vote dataset
+    // First, you need to download and extract Wiki-Vote.txt.gz
+    // Then, run the program with the extracted file
     MaxCliqueFinder finder(argv[1]);
     finder.runAnalysis();
     
