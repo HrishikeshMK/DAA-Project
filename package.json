@@ -1,5 +1,5 @@
 {
-  "name": "proj",
+  "name": "maximal-clique-analysis",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
