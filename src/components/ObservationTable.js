@@ -4,7 +4,7 @@ import { obs  } from "../data";
 const CliqueTable = () => {
   return (
     <div className="table-container">
-      <h1 style={{ textAlign: "center" }}>Other statistics</h1>
+      <h1 style={{ textAlign: "center", color: "#4285F4"}}>Other statistics</h1>
       <table>
         <thead>
           <tr>

@@ -124,10 +124,6 @@ export const datasetAnalysisData3 = [
   { x: 67, y: 4 }
 ];
 
-export const Email = 36692;
-export const Wiki = 459002;
-export const asSkitter = 37322355;
-
 export const ids = [
   
     {id:"2021B3A73029H", name: "Ashish C"},

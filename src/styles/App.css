@@ -5,14 +5,14 @@ body {
   font-family: 'Lexend Deca', sans-serif;
   transition: background 0.3s, color 0.3s;
 }
-
-/* Light Mode */
+.color-word {
+  color : #ff7b00;
+}
 .light-mode {
   background-color: #f4f4f4;
   color: #222222;
 }
 
-/* Dark Mode */
 .dark-mode {
   background-color: #222222;
   color: #d0d0d0;
@@ -20,12 +20,13 @@ body {
 
 .main-body {
   position: relative;
+  font-size: larger;
   padding-top: 140px;
-  padding-left: 20%;
   display: block;
   justify-content: center;
+  width: 50%;
+  left: 25%;
   align-items: center;
-  width : 60%;
   scroll-margin-top: 80px;
 }
 
