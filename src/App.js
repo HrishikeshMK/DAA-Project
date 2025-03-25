@@ -11,12 +11,12 @@ const App = () => {
       <Navbar />
       <main>
         <div className="main-body">
-          <ExecutionTimes data={executionTimesData1} name= "Wiki-Vote" xLabel="Algorithm" yLabel="Execution time (ms)"/>
-          <ExecutionTimes data={executionTimesData2} name= "Email-Enron" xLabel="Algorithm" yLabel="Execution time (ms)"/>
-          <ExecutionTimes data={executionTimesData3} name= "as-skitter" xLabel="Algorithm" yLabel="Execution time (ms)"/>
-          <ExecutionTimes data={datasetAnalysisData1} name= "Wiki-Vote" xLabel="Clique-Distribution" yLabel="Number of max-cliques"/>
-          <ExecutionTimes data={datasetAnalysisData2} name= "Email-Enron" xLabel="Clique-Distribution" yLabel="Number of max-cliques"/>
-          <ExecutionTimes data={datasetAnalysisData3} name= "as-skitter" xLabel="Clique-Distribution" yLabel="Number of max-cliques"/>
+          <ExecutionTimes data={executionTimesData1} title ="Comparison of Execution times" name= "Wiki-Vote" xLabel="Algorithm" yLabel="Execution time (ms)"/>
+          <ExecutionTimes data={executionTimesData2} title ="Comparison of Execution times" name= "Email-Enron" xLabel="Algorithm" yLabel="Execution time (ms)"/>
+          <ExecutionTimes data={executionTimesData3} title ="Comparison of Execution times" name= "as-skitter" xLabel="Algorithm" yLabel="Execution time (ms)"/>
+          <ExecutionTimes data={datasetAnalysisData1} title ="Max-Clique Distribution" name= "Wiki-Vote" xLabel="Clique-Distribution" yLabel="Number of max-cliques"/>
+          <ExecutionTimes data={datasetAnalysisData2} title ="Max-Clique Distribution" name= "Email-Enron" xLabel="Clique-Distribution" yLabel="Number of max-cliques"/>
+          <ExecutionTimes data={datasetAnalysisData3} title ="Max-Clique Distribution" name= "as-skitter" xLabel="Clique-Distribution" yLabel="Number of max-cliques"/>
           <h2>Total Number of Maximal Cliques in each Dataset</h2>
           <h4>Wiki-Vote - {Wiki}</h4>
           <h4>Email-Enron - {Email}</h4>
