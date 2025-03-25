@@ -127,3 +127,19 @@ export const datasetAnalysisData3 = [
 export const Email = 36692;
 export const Wiki = 459002;
 export const asSkitter = 37322355;
+
+export const ids = [
+  
+    {id:"2021B3A73029H", name: "Ashish C"},
+    {id:"2021B3A72396H", name: "Harinandan Arun"},
+    {id:"2022A7PS1538H", name: "Hrishikesh MK"},
+    {id:"2021B3A70723H", name: "Satya K"},
+    {id:"2022A7PS0135H", name: "Yuvraj Chauhan"}
+  
+];
+
+export const obs = [
+  { dataset: "Wiki-Vote", maxCliqueSize: 17, totalCliques: 459002 },
+  { dataset: "Email-Enron", maxCliqueSize: 20, totalCliques: 226859 },
+  { dataset: "as-skitter", maxCliqueSize: 67, totalCliques: 37322355 },
+];

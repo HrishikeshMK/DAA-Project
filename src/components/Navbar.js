@@ -1,6 +1,6 @@
 import React from "react";
 import DarkModeToggle from "./DarkModeToggle";
-import "../styles/App.css";
+import "../styles/Navbar.css";
 
 
 
@@ -16,8 +16,11 @@ const Navbar = () => {
         </div>
       </div>
       <div className="nav-links">
-        <a href="#execution-timesWiki-Vote">Execution Times</a>
-        <a href="#analysis-datasetWiki-Vote">Analysis of Dataset</a>
+        
+        <a href="#Exec-times">Execution Times</a>
+        <a href="#Cliq-dist">Clique Distribution</a>
+        <a href="#other-statistics">Other statistics</a>
+        <a href="#Members">Contributors</a>
       </div>
       
     </nav>
