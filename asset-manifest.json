@@ -1,13 +1,13 @@
 {
   "files": {
-    "main.css": "/DAA-Project/static/css/main.7f9d1c92.css",
-    "main.js": "/DAA-Project/static/js/main.8283b88a.js",
+    "main.css": "/DAA-Project/static/css/main.8afd2bf3.css",
+    "main.js": "/DAA-Project/static/js/main.4a5a225e.js",
     "index.html": "/DAA-Project/index.html",
-    "main.7f9d1c92.css.map": "/DAA-Project/static/css/main.7f9d1c92.css.map",
-    "main.8283b88a.js.map": "/DAA-Project/static/js/main.8283b88a.js.map"
+    "main.8afd2bf3.css.map": "/DAA-Project/static/css/main.8afd2bf3.css.map",
+    "main.4a5a225e.js.map": "/DAA-Project/static/js/main.4a5a225e.js.map"
   },
   "entrypoints": [
-    "static/css/main.7f9d1c92.css",
-    "static/js/main.8283b88a.js"
+    "static/css/main.8afd2bf3.css",
+    "static/js/main.4a5a225e.js"
   ]
 }
