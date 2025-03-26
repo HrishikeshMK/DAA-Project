@@ -1,5 +1,5 @@
 import React from "react";
-import { ids } from "../data.js"; // Import data.js
+import { ids } from "../data.js";
 
 const MemberNames = () => {
     return (

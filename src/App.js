@@ -14,27 +14,44 @@ const App = () => {
         <div className="main-body"> 
           <div id="Intro" style={{ textAlign: "center" }}>
             <h1 style={{color:"#4285F4"}}>Introduction</h1>
-            <p> A <span class="color-word">clique</span> in graph theory, is a <span class="color-word">subset of vertices</span> in an undirected graph where 
-            <span className="color-word"> every two vertices</span> in the subset are 
+            <p> A <span class="color-word">clique</span> in graph theory, is a <span class="color-word">subset of vertices</span> 
+            in an undirected graph where <span className="color-word"> every two vertices</span> in the subset are 
             <span class ="color-word"> connected</span> by an edge, forming a <span class ="color-word">complete subgraph</span>.
-            i.e, all vertices are <span class ="color-word">adjacent</span> to each other</p>
+            i.e, all vertices are <span class ="color-word">adjacent</span> to each other.</p>
+            <p>We have implemented three algorithms in C++ and have analysed their performance on three datasets which can be 
+            found in the Datasets section.</p>
           </div>
           <div id ="Algorithms" style={{ textAlign: "center" }}>
             <h1 style={{color:"#4285F4"}}>Algorithms</h1>
               <h2 style={{color:"#ffce44"}}>Tomita's Algorithm</h2>
-              <p>Tomita's Algorithm for finding maximal cliques uses a depth first search (backtracking) method to
+              <p><strong>Tomita's Algorithm</strong> for finding maximal cliques uses a depth first search (backtracking) method to
                 generate all maximal cliques for an undirected graph. It makes use of a Global set Q, initially
                 empty, which it expands using the expand function. Set Q stores subgraph constituting the cliques at
                 each instance of expand function. Size of MAXCLIQUES at the end of the algorithm gives the number of
                 cliques.</p>
               <h2 style={{color:"#db4437"}}>Bron-Kerbosch Algorithm (ELS)</h2>
-              <p>The MaxClique algorithm is designed to find the maximum clique in an undirected graph. It employs
+              <p><strong>Bron-Kerbosch algorithm</strong> is designed to find the maximum clique in an undirected graph. It employs
                 several pruning techniques to efficiently find the maximum clique, including vertex ordering,
                 degree-based pruning, and recursive exploration.</p>
               <h2 style={{color:"#0f9d58"}}>Chiba's Algorithm</h2>
-              <p>Chiba's Algorithm follows a recursive approach, exploring vertex neighborhoods to identify and extend
+              <p><strong>Chiba's Algorithm</strong> follows a recursive approach, exploring vertex neighborhoods to identify and extend
                 maximal cliques. It maintains efficiency through vertex ordering by degree and uses data structures
                 S and T throughout the algorithm.</p>              
+          </div>
+          <div id="Datasets" style={{ textAlign: "center" }}>
+            <h1 style={{color:"#4285F4"}}>Datasets</h1>
+            <h2 style={{color:"#ffce44"}}>Wikipedia vote network</h2>
+            <p><strong><a href="https://snap.stanford.edu/data/wiki-Vote.html">Wiki-Vote</a></strong> is a directed graph representing the Wikipedia voting network. The nodes represent the 
+            Wikipedia users and the edges represent the votes between the users. The dataset contains
+            <span class="color-word"> 7115</span> nodes and <span class="color-word">103689</span> edges.</p>
+            <h2 style={{color:"#db4437"}}>Email-Enron network</h2>
+            <p><strong><a href="https://snap.stanford.edu/data/email-Enron.html">Email-Enron</a></strong> is a directed graph representing the email communication network of the Enron corporation. 
+            The nodes represent the employees and the edges represent the emails between the employees. 
+            The dataset contains <span class="color-word">36692</span> nodes and <span class="color-word">183831</span> edges.</p>
+            <h2 style={{color:"#0f9d58"}}>Autonomous systems by Skitter</h2>
+            <p><strong><a href="https://snap.stanford.edu/data/as-Skitter.html">Autonomous systems by skitter</a></strong> is a directed graph representing the internet topology. The nodes represent the routers and 
+            the edges represent the connections between the routers. The dataset contains <span class="color-word">1696415 </span> 
+            nodes and <span class="color-word">11095298</span> edges.</p>
           </div>
           <div id="Exec-times">
             <h1 style={{ textAlign: "center", color:"#4285F4" }}>Observations</h1>

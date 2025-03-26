@@ -16,7 +16,8 @@ const Navbar = () => {
         </div>
       </div>
       <div className="nav-links">
-        <a href="#">Algorithms</a>
+        <a href="#Algorithms">Algorithms</a>
+        <a href="#Datasets">Datasets</a>
         <a href="#Exec-times">Execution Times</a>
         <a href="#Cliq-dist">Clique Distribution</a>
         <a href="#other-statistics">Other statistics</a>

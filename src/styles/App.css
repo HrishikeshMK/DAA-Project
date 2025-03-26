@@ -1,13 +1,23 @@
 /* Global Styles */
 /*@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');*/
+a:link {
+  color: #ff7b00;
+}
+
+a:visited {
+  color: #ff7b00;
+}
+
 body {
   margin: 0;
   font-family: 'Lexend Deca', sans-serif;
   transition: background 0.3s, color 0.3s;
 }
+
 .color-word {
   color : #ff7b00;
 }
+
 .light-mode {
   background-color: #f4f4f4;
   color: #222222;
@@ -15,7 +25,7 @@ body {
 
 .dark-mode {
   background-color: #222222;
-  color: #d0d0d0;
+  color: #f4f4f4;
 }
 
 .main-body {
@@ -27,12 +37,13 @@ body {
   width: 50%;
   left: 25%;
   align-items: center;
-  scroll-margin-top: 80px;
+  scroll-margin-top: 140px;
 }
 
 .table-container {
   padding-bottom: 10%;
 }
+
 table {
   width: 100%;
   border-collapse: collapse;
