@@ -14,7 +14,7 @@ const App = () => {
         <div className="main-body"> 
           <div id="Intro" style={{ textAlign: "center" }}>
             <h1 style={{color:"#4285F4"}}>Introduction</h1>
-            <p> A <span class="color-word">clique</span> in graph theory, is a <span class="color-word">subset of vertices</span> 
+            <p> A <span class="color-word">clique</span> in graph theory, is a <span class="color-word">subset of vertices </span> 
             in an undirected graph where <span className="color-word"> every two vertices</span> in the subset are 
             <span class ="color-word"> connected</span> by an edge, forming a <span class ="color-word">complete subgraph</span>.
             i.e, all vertices are <span class ="color-word">adjacent</span> to each other.</p>
