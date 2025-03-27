@@ -17,7 +17,7 @@ const MemberNames = () => {
                         return (
                             <tr key={index} >
                                 <td>{person.id}</td>
-                                <td>{person.name}</td>
+                                <td><a href={person.github} target="_blank" rel="noopener noreferrer">{person.name}</a></td>
                             </tr>
                         )
                     })}

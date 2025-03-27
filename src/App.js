@@ -18,7 +18,7 @@ const App = () => {
             in an undirected graph where <span className="color-word"> every two vertices</span> in the subset are 
             <span class ="color-word"> connected</span> by an edge, forming a <span class ="color-word">complete subgraph</span>.
             i.e, all vertices are <span class ="color-word">adjacent</span> to each other.</p>
-            <p>We have implemented three algorithms in C++ in the <a href="https://github.com/HrishikeshMK/DAA-Project">project page</a>, and have analysed their performance on three datasets which can be 
+            <p>We have implemented three algorithms in C++ in the <a href="https://github.com/HrishikeshMK/DAA-Project" target="_blank" rel="noopener noreferrer">project page</a>, and have analysed their performance on three datasets which can be 
             found in the Datasets section.</p>
           </div>
           <div id ="Algorithms" style={{ textAlign: "center" }}>
@@ -41,15 +41,15 @@ const App = () => {
           <div id="Datasets" style={{ textAlign: "center" }}>
             <h1 style={{color:"#4285F4"}}>Datasets</h1>
             <h2 style={{color:"#ffce44"}}>Wikipedia vote network</h2>
-            <p><strong><a href="https://snap.stanford.edu/data/wiki-Vote.html">Wiki-Vote</a></strong> is a directed graph representing the Wikipedia voting network. The nodes represent the 
+            <p><strong><a href="https://snap.stanford.edu/data/wiki-Vote.html" target="_blank" rel="noopener noreferrer">Wiki-Vote</a></strong> is a directed graph representing the Wikipedia voting network. The nodes represent the 
             Wikipedia users and the edges represent the votes between the users. The dataset contains
             <span class="color-word"> 7115</span> nodes and <span class="color-word">103689</span> edges.</p>
             <h2 style={{color:"#db4437"}}>Email-Enron network</h2>
-            <p><strong><a href="https://snap.stanford.edu/data/email-Enron.html">Email-Enron</a></strong> is a directed graph representing the email communication network of the Enron corporation. 
+            <p><strong><a href="https://snap.stanford.edu/data/email-Enron.html" target="_blank" rel="noopener noreferrer">Email-Enron</a></strong> is a directed graph representing the email communication network of the Enron corporation. 
             The nodes represent the employees and the edges represent the emails between the employees. 
             The dataset contains <span class="color-word">36692</span> nodes and <span class="color-word">183831</span> edges.</p>
             <h2 style={{color:"#0f9d58"}}>Autonomous systems by Skitter</h2>
-            <p><strong><a href="https://snap.stanford.edu/data/as-Skitter.html">Autonomous systems by skitter</a></strong> is a directed graph representing the internet topology. The nodes represent the routers and 
+            <p><strong><a href="https://snap.stanford.edu/data/as-Skitter.html" target="_blank" rel="noopener noreferrer">Autonomous systems by skitter</a></strong> is a directed graph representing the internet topology. The nodes represent the routers and 
             the edges represent the connections between the routers. The dataset contains <span class="color-word">1696415 </span> 
             nodes and <span class="color-word">11095298</span> edges.</p>
           </div>

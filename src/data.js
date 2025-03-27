@@ -126,11 +126,11 @@ export const datasetAnalysisData3 = [
 
 export const ids = [
   
-    {id:"2021B3A73029H", name: "Ashish C"},
-    {id:"2021B3A72396H", name: "Harinandan Arun"},
-    {id:"2022A7PS1538H", name: "Hrishikesh MK"},
-    {id:"2021B3A70723H", name: "Satya K"},
-    {id:"2022A7PS0135H", name: "Yuvraj Chauhan"}
+    {id:"2021B3A73029H", name: "Ashish C", github:"https://github.com/axh-ixh"},
+    {id:"2021B3A72396H", name: "Harinandan Arun", github:"https://github.com/HA1602"},
+    {id:"2022A7PS1538H", name: "Hrishikesh MK", github:"https://github.com/HrishikeshMK"},
+    {id:"2021B3A70723H", name: "Satya K", github:"https://github.com/sattyboi"},
+    {id:"2022A7PS0135H", name: "Yuvraj Chauhan", github:"https://github.com/YuvrajChauhan388"}
   
 ];
 
