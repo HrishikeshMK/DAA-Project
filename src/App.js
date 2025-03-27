@@ -1,6 +1,6 @@
 import React from "react";
 import Navbar from "./components/Navbar";
-import ExecutionTimes from "./pages/Plotter.js";
+import HistogramChart from "./components/HistogramChart";
 import MemberNames from "./components/MemberNames";
 import CliqueTable from "./components/ObservationTable.js";
 import "./styles/App.css";
@@ -18,7 +18,7 @@ const App = () => {
             in an undirected graph where <span className="color-word"> every two vertices</span> in the subset are 
             <span class ="color-word"> connected</span> by an edge, forming a <span class ="color-word">complete subgraph</span>.
             i.e, all vertices are <span class ="color-word">adjacent</span> to each other.</p>
-            <p>We have implemented three algorithms in C++ and have analysed their performance on three datasets which can be 
+            <p>We have implemented three algorithms in C++ in the <a href="https://github.com/HrishikeshMK/DAA-Project">project page</a>, and have analysed their performance on three datasets which can be 
             found in the Datasets section.</p>
           </div>
           <div id ="Algorithms" style={{ textAlign: "center" }}>
@@ -56,21 +56,21 @@ const App = () => {
           <div id="Exec-times">
             <h1 style={{ textAlign: "center", color:"#4285F4" }}>Observations</h1>
             <h2 style={{ textAlign: "center" }}>Comparison of execution times</h2>
-            <ExecutionTimes data={executionTimesData1} title ="Comparison of Execution times" name= "Wiki-Vote" xLabel="Algorithm" yLabel="Execution time (ms)" color="#ffce44"/>
-            <ExecutionTimes data={executionTimesData2} title ="Comparison of Execution times" name= "Email-Enron" xLabel="Algorithm" yLabel="Execution time (ms)" color="#db4437"/>
-            <ExecutionTimes data={executionTimesData3} title ="Comparison of Execution times" name= "as-skitter" xLabel="Algorithm" yLabel="Execution time (ms)" color="#0f9d58"/>
+            <HistogramChart data={executionTimesData1} title ="Comparison of Execution times" name= "Wiki-Vote" xLabel="Algorithm" yLabel="Execution time (ms)" color="#ffce44"/>
+            <HistogramChart data={executionTimesData2} title ="Comparison of Execution times" name= "Email-Enron" xLabel="Algorithm" yLabel="Execution time (ms)" color="#db4437"/>
+            <HistogramChart data={executionTimesData3} title ="Comparison of Execution times" name= "as-skitter" xLabel="Algorithm" yLabel="Execution time (ms)" color="#0f9d58"/>
           </div>
           <div id="Cliq-dist">
             <h2 style={{ textAlign: "center" }}>Maximal Clique Distibution</h2>
-            <ExecutionTimes data={datasetAnalysisData1} title ="Max-Clique Distribution" name= "Wiki-Vote" xLabel="Clique-Distribution" yLabel="Number of max-cliques" color="#ffce44"/>
-            <ExecutionTimes data={datasetAnalysisData2} title ="Max-Clique Distribution" name= "Email-Enron" xLabel="Clique-Distribution" yLabel="Number of max-cliques" color="#db4437"/>
-            <ExecutionTimes data={datasetAnalysisData3} title ="Max-Clique Distribution" name= "as-skitter" xLabel="Clique-Distribution" yLabel="Number of max-cliques" color="#0f9d58"/>
+            <HistogramChart data={datasetAnalysisData1} title ="Max-Clique Distribution" name= "Wiki-Vote" xLabel="Clique-Distribution" yLabel="Number of max-cliques" color="#ffce44"/>
+            <HistogramChart data={datasetAnalysisData2} title ="Max-Clique Distribution" name= "Email-Enron" xLabel="Clique-Distribution" yLabel="Number of max-cliques" color="#db4437"/>
+            <HistogramChart data={datasetAnalysisData3} title ="Max-Clique Distribution" name= "as-skitter" xLabel="Clique-Distribution" yLabel="Number of max-cliques" color="#0f9d58"/>
           </div>
           <div id="other-statistics">
-            < CliqueTable/>
+            < CliqueTable />
           </div>
           <div id = "Members">
-            < MemberNames/>
+            < MemberNames />
           </div>
         </div>
       </main>
