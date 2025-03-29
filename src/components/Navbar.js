@@ -6,9 +6,9 @@ const Navbar = () => {
   return (
     <nav className="navbar" >
       <div className = "nav-header">
-        <img src={favicon1} width="50px" height="50px" />
+        <a href="#Intro"><img src={favicon1} width="50px" height="50px" /></a>
         <div className="navtitle">
-          <h1 className="title">Analysis of Maximal Clique Algorithms</h1>
+          <h1 className="title"><a href="#Intro">Analysis of Maximal Clique Algorithms</a></h1>
         </div>
         <div className="toggle-container">
           <DarkModeToggle />

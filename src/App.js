@@ -53,8 +53,8 @@ const App = () => {
             the edges represent the connections between the routers. The dataset contains <span class="color-word">1696415 </span> 
             nodes and <span class="color-word">11095298</span> edges.</p>
           </div>
-          <div id="Exec-times">
-            <h1 style={{ textAlign: "center", color:"#4285F4" }}>Observations</h1>
+          <h1 style={{ textAlign: "center", color:"#4285F4" }}>Observations</h1>
+          <div id="Exec-times"> 
             <h2 style={{ textAlign: "center" }}>Comparison of execution times</h2>
             <HistogramChart data={executionTimesData1} title ="Comparison of Execution times" name= "Wiki-Vote" xLabel="Algorithm" yLabel="Execution time (ms)" color="#ffce44"/>
             <HistogramChart data={executionTimesData2} title ="Comparison of Execution times" name= "Email-Enron" xLabel="Algorithm" yLabel="Execution time (ms)" color="#db4437"/>

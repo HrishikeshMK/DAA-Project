@@ -31,7 +31,13 @@
   color: inherit;
   font-weight: bold;
 }
-  
+
+.navtitle a {
+  font-size: 2.5rem;
+  text-decoration: none;
+  color: inherit;
+}
+
 /* Dark Mode Toggle */
 .switch {
   position: relative;

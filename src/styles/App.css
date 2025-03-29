@@ -8,6 +8,31 @@ a:visited {
   color: #ff7b00;
 }
 
+/* Scroll padding on anchor tag */
+#Intro {
+  scroll-margin-top: 160px;
+}
+
+#Algorithms {
+  scroll-margin-top: 160px;
+}
+
+#Datasets {
+  scroll-margin-top: 160px;
+}
+
+#Exec-times {
+  scroll-margin-top: 160px;
+}
+
+#Cliq-dist {
+  scroll-margin-top: 160px;
+}
+
+#other-statistics {
+  scroll-margin-top: 160px;
+}
+
 body {
   margin: 0;
   font-family: 'Lexend Deca', sans-serif;
@@ -49,11 +74,14 @@ body {
   width: 50%;
   left: 25%;
   align-items: center;
-  scroll-margin-top: 140px;
 }
 
 .table-container {
-  padding-bottom: 10%;
+  padding-bottom: 3%;
+}
+
+.table-container a {
+  color: #4285F4;
 }
 
 table {
