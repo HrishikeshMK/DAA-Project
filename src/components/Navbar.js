@@ -1,12 +1,15 @@
 import React from "react";
 import DarkModeToggle from "./DarkModeToggle";
 import "../styles/Navbar.css";
+import "../App.css"
 import favicon1 from "../assets/favicon1.png";
 const Navbar = () => {
   return (
     <nav className="navbar" >
       <div className = "nav-header">
-        <a href="#Intro"><img src={favicon1} width="50px" height="50px" /></a>
+        <div className="App-logo">
+        <a href="#Intro"><img src={favicon1} width="70px" height="70px" /></a>
+        </div>
         <div className="navtitle">
           <h1 className="title"><a href="#Intro">Analysis of Maximal Clique Algorithms</a></h1>
         </div>
