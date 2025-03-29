@@ -1,7 +1,8 @@
 .navbar {
-  position:fixed;
+  position: fixed;
   top: 1%;
-  left: 2%;
+  left: 50%;
+  transform: translateX(-50%);
   width: 92%;
   display: block;
   justify-content: space-between;
@@ -77,8 +78,7 @@
 
 .toggle-container {
   width: 5%;
-  justify-content: center; 
-  margin-top: 1rem;
+  justify-items: center; 
 }
   
 input:checked + .slider {

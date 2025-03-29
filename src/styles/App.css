@@ -18,6 +18,11 @@ body {
   color : #ff7b00;
 }
 
+.custom-tooltip {
+  z-index: 1000;
+  border-radius: 5;
+}
+
 .light-mode {
   background-color: #f4f4f4;
   color: #222222;
