@@ -4,7 +4,7 @@ import { ids } from "../data.js";
 const MemberNames = () => {
     return (
         <div className="table-container">
-            <h1 style={{ textAlign: "center", color: "#4285F4" }}>Contributors</h1>
+            <h1 style={{ textAlign: "center", color: "#4285F4" }}>CONTRIBUTORS</h1>
             <table>
                 <thead>
                     <tr>

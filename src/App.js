@@ -13,7 +13,7 @@ const App = () => {
       <main>
         <div className="main-body"> 
           <div id="Intro" style={{ textAlign: "center" }}>
-            <h1 style={{color:"#4285F4"}}>Introduction</h1>
+            <h1 style={{color:"#4285F4"}}>INTRODUCTION</h1>
             <p> A <span class="color-word">clique</span> in graph theory, is a <span class="color-word">subset of vertices </span> 
             in an undirected graph where <span className="color-word"> every two vertices</span> in the subset are 
             <span class ="color-word"> connected</span> by an edge, forming a <span class ="color-word">complete subgraph</span>.
@@ -22,8 +22,8 @@ const App = () => {
             found in the Datasets section.</p>
           </div>
           <div id ="Algorithms" style={{ textAlign: "center" }}>
-            <h1 style={{color:"#4285F4"}}>Algorithms</h1>
-              <h2 style={{color:"#ffce44"}}>Tomita's Algorithm</h2>
+            <h1 style={{color:"#4285F4"}}>ALGORITHMS</h1>
+              <h2 style={{color:"#f5c641"}}>Tomita's Algorithm</h2>
               <p><strong>Tomita's Algorithm</strong> for finding maximal cliques uses a depth first search (backtracking) method to
                 generate all maximal cliques for an undirected graph. It makes use of a Global set Q, initially
                 empty, which it expands using the expand function. Set Q stores subgraph constituting the cliques at
@@ -39,8 +39,8 @@ const App = () => {
                 S and T throughout the algorithm.</p>              
           </div>
           <div id="Datasets" style={{ textAlign: "center" }}>
-            <h1 style={{color:"#4285F4"}}>Datasets</h1>
-            <h2 style={{color:"#ffce44"}}>Wikipedia vote network</h2>
+            <h1 style={{color:"#4285F4"}}>DATASETS</h1>
+            <h2 style={{color:"#f5c641"}}>Wikipedia vote network</h2>
             <p><strong><a href="https://snap.stanford.edu/data/wiki-Vote.html" target="_blank" rel="noopener noreferrer">Wiki-Vote</a></strong> is a directed graph representing the Wikipedia voting network. The nodes represent the 
             Wikipedia users and the edges represent the votes between the users. The dataset contains
             <span class="color-word"> 7115</span> nodes and <span class="color-word">103689</span> edges.</p>
@@ -53,7 +53,7 @@ const App = () => {
             the edges represent the connections between the routers. The dataset contains <span class="color-word">1696415 </span> 
             nodes and <span class="color-word">11095298</span> edges.</p>
           </div>
-          <h1 style={{ textAlign: "center", color:"#4285F4" }}>Observations</h1>
+          <h1 style={{ textAlign: "center", color:"#4285F4" }}>OBSERVATIONS</h1>
           <div id="Exec-times"> 
             <h2 style={{ textAlign: "center" }}>Comparison of execution times</h2>
             <HistogramChart data={executionTimesData1} title ="Comparison of Execution times" name= "Wiki-Vote" xLabel="Algorithm" yLabel="Execution time (s)" color="#ffce44"/>
