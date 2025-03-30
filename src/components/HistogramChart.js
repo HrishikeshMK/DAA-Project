@@ -19,7 +19,7 @@ const HistogramChart = ({ name, data, title, xLabel, yLabel, color }) => {
     <div className="section" id={title + name}>
       <h3 style={{ textAlign: "center" }}>{title} for dataset: {name}</h3>
       <div className="chart-container">
-        <ResponsiveContainer width="100%" aspect={2}>
+        <ResponsiveContainer width="100%" aspect={1.75}>
           <BarChart
             data={data}
             margin={{ top: 20, right: 20, left: 20, bottom: 40 }}

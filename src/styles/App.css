@@ -10,27 +10,27 @@ a:visited {
 
 /* Scroll padding on anchor tag */
 #Intro {
-  scroll-margin-top: 160px;
+  scroll-margin-top: 150px;
 }
 
 #Algorithms {
-  scroll-margin-top: 160px;
+  scroll-margin-top: 150px;
 }
 
 #Datasets {
-  scroll-margin-top: 160px;
+  scroll-margin-top: 150px;
 }
 
 #Exec-times {
-  scroll-margin-top: 160px;
+  scroll-margin-top: 150px;
 }
 
 #Cliq-dist {
-  scroll-margin-top: 160px;
+  scroll-margin-top: 150px;
 }
 
 #other-statistics {
-  scroll-margin-top: 160px;
+  scroll-margin-top: 150px;
 }
 
 body {
@@ -110,4 +110,33 @@ td {
 th {
   background-color: #4285F4;
   color: #f4f4f4;
+}
+@media (max-width: 1100px) {
+  .main-body {
+    width: 70%;
+    left: 15%;
+    font-size: large;
+  }
+}
+
+@media (max-width: 850px) {
+  .main-body {
+    width: 80%;
+    left: 10%;
+    font-size: medium;
+  }
+}
+@media (max-width: 600px) {
+  .main-body {
+    width: 90%;
+    left: 5%;
+    font-size: smaller;
+  }
+}
+@media (max-width: 400px) {
+  .main-body {
+    width: 95%;
+    left: 2.5%;
+    font-size: x-small;
+  }
 }
