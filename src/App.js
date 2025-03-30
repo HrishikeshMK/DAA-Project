@@ -56,9 +56,9 @@ const App = () => {
           <h1 style={{ textAlign: "center", color:"#4285F4" }}>Observations</h1>
           <div id="Exec-times"> 
             <h2 style={{ textAlign: "center" }}>Comparison of execution times</h2>
-            <HistogramChart data={executionTimesData1} title ="Comparison of Execution times" name= "Wiki-Vote" xLabel="Algorithm" yLabel="Execution time (ms)" color="#ffce44"/>
-            <HistogramChart data={executionTimesData2} title ="Comparison of Execution times" name= "Email-Enron" xLabel="Algorithm" yLabel="Execution time (ms)" color="#db4437"/>
-            <HistogramChart data={executionTimesData3} title ="Comparison of Execution times" name= "as-skitter" xLabel="Algorithm" yLabel="Execution time (ms)" color="#0f9d58"/>
+            <HistogramChart data={executionTimesData1} title ="Comparison of Execution times" name= "Wiki-Vote" xLabel="Algorithm" yLabel="Execution time (s)" color="#ffce44"/>
+            <HistogramChart data={executionTimesData2} title ="Comparison of Execution times" name= "Email-Enron" xLabel="Algorithm" yLabel="Execution time (s)" color="#db4437"/>
+            <HistogramChart data={executionTimesData3} title ="Comparison of Execution times" name= "as-skitter" xLabel="Algorithm" yLabel="Execution time (s)" color="#0f9d58"/>
           </div>
           <div id="Cliq-dist">
             <h2 style={{ textAlign: "center" }}>Maximal Clique Distibution</h2>
