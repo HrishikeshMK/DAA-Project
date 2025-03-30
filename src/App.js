@@ -23,7 +23,7 @@ const App = () => {
           </div>
           <div id ="Algorithms" style={{ textAlign: "center" }}>
             <h1 style={{color:"#4285F4"}}>ALGORITHMS</h1>
-              <h2 style={{color:"#f5c641"}}>Tomita's Algorithm</h2>
+              <h2 style={{color:"#FBBC04"}}>Tomita's Algorithm</h2>
               <p><strong>Tomita's Algorithm</strong> for finding maximal cliques uses a depth first search (backtracking) method to
                 generate all maximal cliques for an undirected graph. It makes use of a Global set Q, initially
                 empty, which it expands using the expand function. Set Q stores subgraph constituting the cliques at
@@ -40,7 +40,7 @@ const App = () => {
           </div>
           <div id="Datasets" style={{ textAlign: "center" }}>
             <h1 style={{color:"#4285F4"}}>DATASETS</h1>
-            <h2 style={{color:"#f5c641"}}>Wikipedia vote network</h2>
+            <h2 style={{color:"#FBBC04"}}>Wikipedia vote network</h2>
             <p><strong><a href="https://snap.stanford.edu/data/wiki-Vote.html" target="_blank" rel="noopener noreferrer">Wiki-Vote</a></strong> is a directed graph representing the Wikipedia voting network. The nodes represent the 
             Wikipedia users and the edges represent the votes between the users. The dataset contains
             <span class="color-word"> 7115</span> nodes and <span class="color-word">103689</span> edges.</p>
